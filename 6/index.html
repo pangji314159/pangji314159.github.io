@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>ch03.1</title>
+		<script id="vertex-shader" type="x-shader/x-vertex">
+		attribute vec4 vPosition;
+		void main(){
+			gl_Position = vPosition;
+		}
+		</script>
+
+		<script id="fragment-shader" type="x-shader/x-fragment">
+		precision mediump float;
+		void main(){
+			gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );
+		}
+		</script>
+		<script type="text/javascript" src="./chapter/webgl-utils.js"></script>
+		<script type="text/javascript" src="./chapter/initShaders.js"></script>
+		<script type="text/javascript" src="./chapter/gl-matrix-min.js"></script>
+		<script type="text/javascript" src="./chapter/gasket-triangles.js"></script>
+	</head>
+	<body>
+    <canvas id="gl-canvas" width="500" height="500"></canvas>
+
+	
+	    <br>生成三角形<br>
+		<button id="direction" onclick="generate()">生成</button>
+		<input type="text" id="level"  value="">
+		<br>
+		<button id="qingchu" onclick="javascript:location.reload()">清除</button><br>
+	</body>
+</html>
